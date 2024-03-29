@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAP-11 CSS Media queries & Deployment ||dummy Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4; /* Adding a light background color */
+        }
+
+        header {
+            background-image:radial-gradient(#3a3838 10%,#000);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            &>h1{
+                background-image:radial-gradient(circle,red 1%,yellow 3%,rgb(0, 255, 21) 20%);
+	            background-clip: text;
+	            -webkit-background-clip: text;
+	            -webkit-text-fill-color: transparent;
+	            font-weight: bold;
+	            font-style: italic;
+	            font-family:'Poppin',sans-serif;
+            }
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a, nav select {
+            color: #fff; /* Colorful font */
+            text-decoration: none;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #444;
+            font-size: 16px;
+        }
+
+        nav select {
+            display: none;
+        }
+
+      
+
+        @media only screen and (max-width: 768px) {
+            nav a {
+                display: none;
+            }
+
+            nav select {
+                display: inline-block;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-color: #555;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #777;
+                width: 100%;
+                box-sizing: border-box;
+                color: #fff;
+            }
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fff; /* Adding a white background color */
+            color: #333; /* Changing text color to a darker shade */
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        section div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media only screen and (min-width: 769px) {
+            section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            section img {
+                width: 45%;
+                margin-right: 20px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact Me</a>
+    <select>
+        <option value="#home">Home</option>
+        <option value="#education">Education</option>
+        <option value="#projects">Projects</option>
+        <option value="#skills">Skills</option>
+        <option value="#contact">Contact Me</option>
+    </select>
+</nav>
+
+<section id="home">
+    <div>
+        <img src="images.png" alt="Home Image">
+    </div>
+    <div>
+        
+        <h2 style="color: #4caf50;">Home</h2>
+        <p>This is a dummy description for the Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+<section id="education">
+    <div>
+        <img src="Untitled.jpeg" alt="Education Image">
+
+    </div>
+    <div>
+        <h2 style="color: #e91e63;">Education</h2>
+        <p>This is a dummy description for the Education section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <div>
+        <img src="Untitled01.jpeg" alt="Projects Image">
+
+    </div>
+    <div>
+        <h2 style="color: #ffc107;">Projects</h2>
+        <p>This is a dummy description for the Projects section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <div>
+        <img src="Untitled02.jpeg" alt="Skills Image">
+
+    </div>
+    <div>
+        <h2 style="color: #9c27b0;">Skills</h2>
+        <p>This is a dummy description for the Skills section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div>
+        <img src="Untitled03.jpeg" alt="Contact Image">
+
+    </div>
+    <div>
+        <h2 style="color: #2196f3;">Contact Me</h2>
+        <p>This is a dummy description for the Contact Me section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+</body>
+</html>
